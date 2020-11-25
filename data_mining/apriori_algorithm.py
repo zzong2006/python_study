@@ -9,7 +9,7 @@ import json
 
 
 def read_csv_file(file_name):
-    with open('./input/groceries - groceries.csv', 'r') as f:
+    with open(file_name, 'r') as f:
         reader = csv.reader(f)
         user_list = []
         max_val = 0
@@ -34,7 +34,7 @@ def get_unique_items(users):
     return items
 
 
-path = './input/groceries - groceries.csv'
+path = '../input/groceries - groceries.csv'
 threshold = 0.01
 users = read_csv_file(path)
 item_types = get_unique_items(users)
